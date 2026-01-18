@@ -42,35 +42,33 @@ const Hero = () => {
                         MCA graduate passionate about building modern, responsive web applications using the MERN stack.
                         Experienced in developing scalable solutions with ASP.NET MVC and Docker-based deployments.
                     </p>
-                    <div className="hero-cta-group">
-                        <div className="hero-actions">
-                            <button className="btn btn-primary" onClick={scrollToProjects}>
-                                View My Work
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M5 12H19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                    <path d="M12 5L19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                </svg>
-                            </button>
-                            <button className="btn btn-outline" onClick={scrollToContact}>
-                                Contact Me
-                            </button>
-                        </div>
+                    <div className="hero-actions">
+                        <button className="btn btn-primary" onClick={scrollToProjects}>
+                            View My Work
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 12H19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                <path d="M12 5L19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                            </svg>
+                        </button>
+                        <button className="btn btn-outline" onClick={scrollToContact}>
+                            Contact Me
+                        </button>
+                    </div>
 
-                        <div className="hero-stats">
-                            <div className="stat-item">
-                                <span className="stat-number">3+</span>
-                                <span className="stat-label">Years Exp</span>
-                            </div>
-                            <div className="stat-divider"></div>
-                            <div className="stat-item">
-                                <span className="stat-number">10+</span>
-                                <span className="stat-label">Projects</span>
-                            </div>
-                            <div className="stat-divider"></div>
-                            <div className="stat-item">
-                                <span className="stat-number">5+</span>
-                                <span className="stat-label">Clients</span>
-                            </div>
+                    <div className="hero-stats">
+                        <div className="stat-item">
+                            <span className="stat-number">3+</span>
+                            <span className="stat-label">Years Exp</span>
+                        </div>
+                        <div className="stat-divider"></div>
+                        <div className="stat-item">
+                            <span className="stat-number">10+</span>
+                            <span className="stat-label">Projects</span>
+                        </div>
+                        <div className="stat-divider"></div>
+                        <div className="stat-item">
+                            <span className="stat-number">5+</span>
+                            <span className="stat-label">Clients</span>
                         </div>
                     </div>
                 </div>
