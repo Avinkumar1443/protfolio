@@ -5,8 +5,10 @@
     position: relative;
     overflow: hidden;
     padding-top: 80px;
+    background: linear-gradient(150deg, #030513 0%, #070a1a 55%, #070a1b 100%);
     /* Navbar offset */
 }
+
 
 /* Background Effects */
 .hero-background {
