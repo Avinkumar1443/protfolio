@@ -63,18 +63,6 @@
 
 /* ... existing styles ... */
 
-/* Hero Visual - Photo Styling */
-.hero-visual {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    opacity: 0;
-    transform: translateX(30px);
-    transition: all 1s ease-out 0.3s;
-    /* Offset to align with H1 ("Building Digital...") below the badge */
-    margin-top: 5rem;
-}
-
 .hero-content.animate-in {
     opacity: 1;
     transform: translateY(0);
@@ -139,6 +127,7 @@
     gap: var(--spacing-md);
     margin-bottom: var(--spacing-xl);
     flex-shrink: 0;
+    flex-wrap: wrap;
 }
 
 .hero-actions svg {
@@ -150,6 +139,10 @@
     transform: translateX(4px);
 }
 
+.hero-actions .btn {
+    min-width: 160px;
+}
+
 /* Stats Styling - Bottom row below buttons */
 .hero-stats {
     display: flex;
@@ -158,6 +151,7 @@
     padding-top: var(--spacing-xl);
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     max-width: fit-content;
+    flex-wrap: wrap;
 }
 
 .stat-item {
@@ -193,6 +187,8 @@
     opacity: 0;
     transform: translateX(30px);
     transition: all 1s ease-out 0.3s;
+    margin-top: 5rem;
+    align-items: center;
 }
 
 .hero-visual.animate-in {
@@ -374,19 +370,29 @@
     }
 
     /* Wrap buttons and stats on tablet/mobile */
-    .hero-cta-group {
-        flex-direction: column;
-        gap: var(--spacing-xl);
-    }
-
     .hero-actions {
+        flex-direction: column;
+        gap: var(--spacing-lg);
         justify-content: center;
         width: 100%;
+        align-items: center;
     }
 
     .hero-stats {
         justify-content: center;
         width: 100%;
+        gap: var(--spacing-lg);
+        border-top: none;
+        padding-top: var(--spacing-lg);
+    }
+
+    .hero-stats .stat-divider {
+        display: none;
+    }
+
+    .hero-stats .stat-item {
+        min-width: 120px;
+        text-align: center;
     }
 
     .photo-badge.floating {
@@ -397,8 +403,36 @@
         width: fit-content;
     }
 
-    .hero-photo-container {
+.hero-photo-container {
         max-width: 320px;
         margin: 0 auto;
+    }
+}
+
+@media (max-width: 640px) {
+    .hero {
+        padding-top: 60px;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-headline {
+        font-size: 1.3rem;
+    }
+
+    .hero-description {
+        font-size: 0.95rem;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+        max-width: 360px;
+        justify-content: center;
+    }
+
+    .hero-photo-container {
+        max-width: 280px;
     }
 }
