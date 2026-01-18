@@ -1,0 +1,404 @@
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding-top: 80px;
+    /* Navbar offset */
+}
+
+/* Background Effects */
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.gradient-sphere {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.4;
+    animation: float 10s ease-in-out infinite;
+}
+
+.sphere-1 {
+    width: 400px;
+    height: 400px;
+    background: var(--gradient-primary);
+    top: -100px;
+    right: -100px;
+}
+
+.sphere-2 {
+    width: 300px;
+    height: 300px;
+    background: #4facfe;
+    bottom: -50px;
+    left: -50px;
+    animation-delay: -5s;
+}
+
+.hero-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-2xl);
+    align-items: start;
+    position: relative;
+    z-index: 1;
+}
+
+/* Hero Content */
+.hero-content {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s ease-out;
+    padding-top: var(--spacing-xl);
+}
+
+/* ... existing styles ... */
+
+/* Hero Visual - Photo Styling */
+.hero-visual {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    transform: translateX(30px);
+    transition: all 1s ease-out 0.3s;
+    /* Offset to align with H1 ("Building Digital...") below the badge */
+    margin-top: 5rem;
+}
+
+.hero-content.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: var(--spacing-xs) var(--spacing-md);
+    background: rgba(102, 126, 234, 0.1);
+    border: 1px solid rgba(102, 126, 234, 0.2);
+    border-radius: var(--radius-full);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-lg);
+}
+
+.badge-dot {
+    width: 8px;
+    height: 8px;
+    background: #4caf50;
+    border-radius: 50%;
+    margin-right: var(--spacing-sm);
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-bottom: var(--spacing-sm);
+    font-weight: 700;
+}
+
+.hero-headline {
+    font-size: 2rem;
+    color: var(--color-text-primary);
+    /* Or a slightly lighter shade? User specified text primary #FFFFFF */
+    margin-bottom: var(--spacing-lg);
+    line-height: 1.3;
+    font-weight: 600;
+}
+
+.text-gradient {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-description {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-xl);
+    max-width: 500px;
+    line-height: 1.6;
+}
+
+.hero-cta-group {
+    display: flex;
+    flex-direction: row;
+    /* Explicitly horizontal on desktop */
+    align-items: center;
+    gap: var(--spacing-2xl);
+    margin-bottom: var(--spacing-2xl);
+    flex-wrap: wrap;
+    /* Allow wrapping only if absolutely necessary */
+}
+
+.hero-actions {
+    display: flex;
+    gap: var(--spacing-md);
+    flex-shrink: 0;
+    /* Prevent buttons from squishing */
+}
+
+.hero-actions svg {
+    margin-left: var(--spacing-xs);
+    transition: transform var(--transition-fast);
+}
+
+.btn-primary:hover svg {
+    transform: translateX(4px);
+}
+
+/* Stats Styling - Repositioned next to buttons */
+.hero-stats {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xl);
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-number {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    /* Using primary accent color as requested */
+}
+
+.stat-label {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    opacity: 0.8;
+}
+
+.stat-divider {
+    width: 1px;
+    height: 35px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Hero Visual - Photo Styling */
+.hero-visual {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    transform: translateX(30px);
+    transition: all 1s ease-out 0.3s;
+}
+
+.hero-visual.animate-in {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.hero-photo-container {
+    position: relative;
+    max-width: 450px;
+    width: 100%;
+}
+
+.hero-photo {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.4));
+    mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
+    transition: transform 0.5s ease;
+}
+
+.hero-photo:hover {
+    transform: translateY(-5px) scale(1.02);
+}
+
+.photo-backdrop {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    right: 10%;
+    bottom: 0;
+    background: radial-gradient(circle, rgba(124, 124, 255, 0.3) 0%, transparent 70%);
+    /* Refined with accent color */
+    filter: blur(40px);
+    z-index: -1;
+    animation: pulse 4s infinite ease-in-out;
+}
+
+
+/* 1. React (Top Left Corner) */
+.tech-icon.react {
+    top: 5%;
+    left: -30px;
+    animation-delay: 0s;
+}
+
+/* 2. Next.js (Top Right Corner) */
+.tech-icon.next {
+    top: 10%;
+    right: -20px;
+    animation-delay: 1.5s;
+    color: #fff;
+    font-size: 2.5rem;
+}
+
+/* 3. PostgreSQL (Middle Left) */
+.tech-icon.postgres {
+    top: 45%;
+    left: -40px;
+    animation-delay: 3s;
+}
+
+/* 4. ASP.NET (Middle/Bottom Right) */
+.tech-icon.dotnet {
+    top: 50%;
+    right: -35px;
+    animation-delay: 4.5s;
+    font-size: 2rem;
+}
+
+/* 5. Strapi (Bottom Left) */
+.tech-icon.strapi {
+    bottom: 15%;
+    left: -20px;
+    animation-delay: 6s;
+    font-size: 2rem;
+}
+
+/* Photo Badge - Repositioned to avoid overlap */
+.photo-badge.floating {
+    position: absolute;
+    bottom: 5%;
+    right: -60px;
+    /* Pushed further out */
+    background: rgba(26, 26, 36, 0.9);
+    /* More opaque */
+    backdrop-filter: blur(16px);
+    padding: 14px 24px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    animation: float 6s ease-in-out infinite;
+    z-index: 10;
+    max-width: 280px;
+}
+
+.badge-icon {
+    font-size: 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 8px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.badge-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.badge-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+}
+
+.badge-subtitle {
+    font-size: 0.75rem;
+    color: var(--color-text-secondary);
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 0.4;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.6;
+        transform: scale(1.05);
+    }
+}
+
+@media (max-width: 968px) {
+    .hero-container {
+        grid-template-columns: 1fr;
+        padding-top: var(--spacing-xl);
+        gap: var(--spacing-xl);
+    }
+
+    .hero-content {
+        text-align: center;
+        order: 1;
+    }
+
+    .hero-visual {
+        order: 2;
+        margin-top: var(--spacing-lg);
+        transform: translateY(30px);
+    }
+
+    .hero-visual.animate-in {
+        transform: translateY(0);
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-headline {
+        font-size: 1.5rem;
+    }
+
+    .hero-description {
+        margin: 0 auto var(--spacing-xl);
+        font-size: 1rem;
+    }
+
+    /* Wrap buttons and stats on tablet/mobile */
+    .hero-cta-group {
+        flex-direction: column;
+        gap: var(--spacing-xl);
+    }
+
+    .hero-actions {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .hero-stats {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .photo-badge.floating {
+        right: 0;
+        bottom: 5%;
+        left: 0;
+        margin: 0 auto;
+        width: fit-content;
+    }
+
+    .hero-photo-container {
+        max-width: 320px;
+        margin: 0 auto;
+    }
+}
