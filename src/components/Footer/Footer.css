@@ -3,6 +3,7 @@
         opacity: 0;
         transform: translateY(24px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -13,9 +14,11 @@
     0% {
         transform: translateY(0);
     }
+
     50% {
         transform: translateY(-8px);
     }
+
     100% {
         transform: translateY(0);
     }
@@ -136,69 +139,6 @@
     outline-offset: 3px;
 }
 
-.back-to-top {
-    position: fixed;
-    right: var(--spacing-xl);
-    bottom: var(--spacing-xl);
-    width: 52px;
-    height: 52px;
-    border: none;
-    border-radius: 16px;
-    background: linear-gradient(135deg, #7c7cff, #6c63ff);
-    color: var(--color-text-primary);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    box-shadow: 0 15px 30px rgba(124, 124, 255, 0.4);
-    transform: translateY(10px);
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    animation: float 4s ease-in-out infinite;
-    z-index: var(--z-fixed);
-    position: fixed;
-    isolation: isolate;
-    overflow: hidden;
-}
-
-.back-to-top.visible {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
-
-.back-to-top svg {
-    width: 24px;
-    height: 24px;
-}
-
-.back-to-top:hover {
-    box-shadow: 0 18px 35px rgba(124, 124, 255, 0.6);
-    transform: translateY(-4px);
-}
-
-.back-to-top::after {
-    content: '';
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    width: 60%;
-    height: 2px;
-    background: linear-gradient(90deg, rgba(124,124,255,0) 0%, rgba(124,124,255,0.9) 50%, rgba(124,124,255,0) 100%);
-    transform: translateX(-50%) scaleX(0);
-    transform-origin: center;
-    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.35s ease;
-    opacity: 0;
-    border-radius: 999px;
-}
-
-.back-to-top:hover::after,
-.back-to-top:focus-visible::after {
-    transform: translateX(-50%) scaleX(1);
-    opacity: 1;
-}
-
 @media (max-width: 900px) {
     .footer-grid {
         grid-template-columns: 1fr;
@@ -218,10 +158,5 @@
 
     .footer-divider {
         width: 100px;
-    }
-
-    .back-to-top {
-        right: var(--spacing-lg);
-        bottom: var(--spacing-lg);
     }
 }

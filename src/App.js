@@ -9,6 +9,7 @@ import Certifications from './components/Certifications/Certifications';
 import Interests from './components/Interests/Interests';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
+import BackToTop from './components/BackToTop/BackToTop';
 import './App.css';
 
 function App() {
@@ -51,6 +52,7 @@ function App() {
         <Contact />
       </main>
       <Footer />
+      <BackToTop />
     </div>
   );
 }

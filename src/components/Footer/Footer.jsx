@@ -23,18 +23,8 @@ const socialLinks = [
 ];
 
 const Footer = () => {
-    const [showBackToTop, setShowBackToTop] = useState(false);
     const [isVisible, setIsVisible] = useState(false);
     const footerRef = useRef(null);
-
-    useEffect(() => {
-        const handleScroll = () => {
-            setShowBackToTop(window.scrollY > 500);
-        };
-
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
 
     useEffect(() => {
         if (!footerRef.current) return;
@@ -54,12 +44,6 @@ const Footer = () => {
         return () => observer.disconnect();
     }, []);
 
-    const scrollToTop = () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    };
 
     const currentYear = new Date().getFullYear();
 
@@ -91,16 +75,6 @@ const Footer = () => {
                     ))}
                 </div>
             </div>
-
-            <button
-                className={`back-to-top ${showBackToTop ? 'visible' : ''}`}
-                onClick={scrollToTop}
-                aria-label="Back to top"
-            >
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M12 19V5M5 12l7-7 7 7" />
-                </svg>
-            </button>
         </footer>
     );
 };
