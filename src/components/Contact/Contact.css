@@ -61,6 +61,11 @@
     flex-shrink: 0;
 }
 
+.contact-details {
+    min-width: 0;
+    overflow: hidden;
+}
+
 .contact-details h4 {
     font-size: 0.9rem;
     color: var(--color-text-secondary);
@@ -74,6 +79,8 @@
     font-size: 1rem;
     font-weight: 600;
     text-decoration: none;
+    word-break: break-word;
+    overflow-wrap: break-word;
 }
 
 .contact-details a:hover {
@@ -219,6 +226,7 @@
     .social-icons {
         justify-content: flex-start;
     }
+
     .contact-info,
     .contact-form {
         width: 100%;
@@ -239,7 +247,8 @@
         justify-content: center;
     }
 
-    .social-icon, .contact-card {
+    .social-icon,
+    .contact-card {
         width: 100%;
     }
 
@@ -308,15 +317,24 @@
     }
 
     .contact-info {
-        padding: 0 var(--spacing-sm);
+        padding: 0;
+    }
+
+    .contact-info h3 {
+        font-size: 1.25rem;
     }
 
     .contact-intro {
-        font-size: 0.95rem;
+        font-size: 0.9rem;
+        line-height: 1.6;
     }
 
     .contact-form {
-        padding: var(--spacing-lg);
+        padding: var(--spacing-md);
+    }
+
+    .contact-form h3 {
+        font-size: 1.25rem;
     }
 
     .contact-card {
@@ -324,6 +342,20 @@
         box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
         border-color: rgba(255, 255, 255, 0.2);
         transform: none;
+    }
+
+    .contact-details h4 {
+        font-size: 0.8rem;
+    }
+
+    .contact-details p,
+    .contact-details a {
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
+
+    .social-links h4 {
+        font-size: 0.9rem;
     }
 
     .social-icons {
@@ -334,34 +366,119 @@
         width: 100%;
         justify-content: center;
         padding: 12px;
+        font-size: 0.9rem;
     }
 
     .submit-btn {
         padding: 12px;
+        font-size: 0.95rem;
+    }
+
+    .section-title h2 {
+        font-size: 1.75rem;
+    }
+
+    .section-subtitle {
+        font-size: 0.9rem;
     }
 }
 
 @media (max-width: 520px) {
     .contact {
-        padding: var(--spacing-2xl) var(--spacing-sm);
+        padding: var(--spacing-2xl) var(--spacing-xs);
     }
 
     .contact-content {
-        gap: var(--spacing-lg);
+        gap: var(--spacing-md);
+    }
+
+    .section-title {
+        margin-bottom: var(--spacing-lg);
+    }
+
+    .section-title h2 {
+        font-size: 1.5rem;
+    }
+
+    .section-subtitle {
+        font-size: 0.85rem;
+    }
+
+    .contact-info h3 {
+        font-size: 1.1rem;
+    }
+
+    .contact-intro {
+        font-size: 0.85rem;
+        margin-bottom: var(--spacing-md);
     }
 
     .contact-card {
-        padding: var(--spacing-md);
+        padding: var(--spacing-sm);
         box-shadow: none;
         border-color: rgba(255, 255, 255, 0.2);
         transform: none;
+        gap: var(--spacing-sm);
+    }
+
+    .contact-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.25rem;
     }
 
     .contact-card .contact-details {
-        width: 100%;
+        width: calc(100% - 48px);
+    }
+
+    .contact-details h4 {
+        font-size: 0.75rem;
+    }
+
+    .contact-details p,
+    .contact-details a {
+        font-size: 0.8rem;
+        font-weight: 500;
+    }
+
+    .social-links h4 {
+        font-size: 0.85rem;
+    }
+
+    .social-icon {
+        padding: 10px;
+        font-size: 0.85rem;
+    }
+
+    .social-icon svg {
+        width: 18px;
+        height: 18px;
     }
 
     .contact-form {
-        padding: var(--spacing-lg);
+        padding: var(--spacing-md);
+    }
+
+    .contact-form h3 {
+        font-size: 1.1rem;
+    }
+
+    .form-group label {
+        font-size: 0.85rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 0.9rem;
+        padding: 10px 12px;
+    }
+
+    .submit-btn {
+        font-size: 0.9rem;
+        padding: 11px;
+    }
+
+    .trust-note small {
+        font-size: 0.75rem;
     }
 }
