@@ -31,6 +31,14 @@ const Navigation = () => {
     { id: 'contact', label: 'Contact' }
   ];
 
+  useEffect(() => {
+    document.body.style.overflow = isMobileMenuOpen ? 'hidden' : '';
+
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isMobileMenuOpen]);
+
   return (
     <nav className={`navigation ${isScrolled ? 'scrolled' : ''}`}>
       <div className="nav-container">
@@ -38,7 +46,7 @@ const Navigation = () => {
           <span className="gradient-text">Avin Kumar</span>
         </div>
 
-        <div className={`nav-links ${isMobileMenuOpen ? 'mobile-active' : ''}`}>
+        <div id="mobile-nav" className={`nav-links ${isMobileMenuOpen ? 'mobile-active' : ''}`}>
           {navLinks.map((link) => (
             <button
               key={link.id}
@@ -54,6 +62,8 @@ const Navigation = () => {
           className="mobile-menu-toggle"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Toggle menu"
+          aria-controls="mobile-nav"
+          aria-expanded={isMobileMenuOpen}
         >
           <span className={`hamburger ${isMobileMenuOpen ? 'active' : ''}`}></span>
         </button>
