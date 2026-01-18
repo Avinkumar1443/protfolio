@@ -28,10 +28,10 @@ const Hero = () => {
 
             <div className="container hero-container">
                 <div className={`hero-content ${animate ? 'animate-in' : ''}`}>
-                    <div className="hero-badge">
+                    {/* <div className="hero-badge">
                         <span className="badge-dot"></span>
                         Available for Work
-                    </div>
+                    </div> */}
                     <h1>
                         Hi, I'm <span className="text-gradient">Avin Kumar</span>
                     </h1>

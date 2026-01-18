@@ -157,6 +157,8 @@
     font-size: 0.9rem;
     font-weight: 500;
     text-decoration: none;
+    cursor: pointer;
+    width: 100%;
     transition: all var(--transition-base);
 }
 
@@ -171,6 +173,129 @@
     height: 16px;
 }
 
+/* Modal Styles */
+.cert-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 10, 15, 0.9);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    padding: var(--spacing-md);
+    animation: fadeIn 0.3s ease;
+}
+
+.cert-modal-content {
+    background: var(--color-bg-primary);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-xl);
+    width: 100%;
+    max-width: 900px;
+    max-height: 90vh;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    animation: modalSlide 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.close-modal-btn {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-full);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--color-text-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all var(--transition-base);
+    z-index: 10;
+}
+
+.close-modal-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: rotate(90deg);
+}
+
+.close-modal-btn svg {
+    width: 24px;
+    height: 24px;
+}
+
+.modal-body {
+    padding: 1.5rem;
+    padding-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.modal-image {
+    width: 100%;
+    height: auto;
+    max-height: 70vh;
+    object-fit: contain;
+    border-radius: var(--radius-md);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.modal-pdf-viewer {
+    width: 100%;
+    height: 70vh;
+    border: none;
+    border-radius: var(--radius-md);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.modal-info {
+    text-align: center;
+    padding-bottom: 0.5rem;
+}
+
+.modal-info h3 {
+    font-size: 1.5rem;
+    color: var(--color-text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.modal-info p {
+    color: var(--color-text-secondary);
+    font-size: 1rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes modalSlide {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .certifications-grid {
@@ -180,5 +305,25 @@
 
     .certification-card {
         padding: 1.5rem;
+    }
+
+    .cert-modal-content {
+        max-height: 95vh;
+    }
+
+    .modal-body {
+        padding: 1rem;
+        padding-top: 3.5rem;
+    }
+
+    .modal-info h3 {
+        font-size: 1.2rem;
+    }
+
+    .close-modal-btn {
+        top: 1rem;
+        right: 1rem;
+        width: 36px;
+        height: 36px;
     }
 }

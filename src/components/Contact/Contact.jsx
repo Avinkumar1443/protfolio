@@ -16,33 +16,61 @@ const Contact = () => {
         });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         setFormStatus('sending');
 
-        // Simulate form submission
-        setTimeout(() => {
-            setFormStatus('success');
-            setFormData({ name: '', email: '', message: '' });
+        try {
+            const response = await fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify({
+                    access_key: '97dffdc2-ffb2-43a7-9fec-5ea6af8b53ce',
+                    name: formData.name,
+                    email: formData.email,
+                    message: formData.message,
+                    subject: `Portfolio Inquiry from ${formData.name}`,
+                    from_name: 'Portfolio Contact'
+                })
+            });
 
-            setTimeout(() => {
-                setFormStatus('');
-            }, 5000);
-        }, 1500);
+            const result = await response.json();
+
+            if (result.success) {
+                setFormStatus('success');
+                setFormData({ name: '', email: '', message: '' });
+
+                // Reset success status after a delay
+                setTimeout(() => {
+                    setFormStatus('');
+                }, 5000);
+            } else {
+                console.error('Submission failed:', result.message);
+                setFormStatus('error');
+                setTimeout(() => setFormStatus(''), 3000);
+            }
+        } catch (error) {
+            console.error('Submission error:', error);
+            setFormStatus('error');
+            setTimeout(() => setFormStatus(''), 3000);
+        }
     };
 
     const contactInfo = [
         {
             icon: '📧',
             title: 'Email',
-            value: 'avinkumar.work@gmail.com',
-            link: 'mailto:avinkumar.work@gmail.com'
+            value: 'avinkumarsubburam09@gmail.com',
+            link: 'mailto:avinkumarsubburam09@gmail.com'
         },
         {
             icon: '📱',
             title: 'Phone',
-            value: '+91 98765 XXXXX',
-            link: 'tel:+919876500000'
+            value: '+91 93453 06018',
+            link: 'tel:+919345306018'
         },
         {
             icon: '📍',
@@ -87,7 +115,7 @@ const Contact = () => {
                         <div className="social-links">
                             <h4>Connect with me</h4>
                             <div className="social-icons">
-                                <a href="https://linkedin.com/in/avinkumar" target="_blank" rel="noopener noreferrer" className="social-icon linkedin">
+                                <a href="https://linkedin.com/in/avinkumarsubburam-s" target="_blank" rel="noopener noreferrer" className="social-icon linkedin">
                                     <svg viewBox="0 0 24 24" fill="currentColor">
                                         <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
                                     </svg>
