@@ -7,7 +7,7 @@ const SEO = ({ title, description, keywords, name, type, url, image }) => {
     const defaultKeywords = "Full Stack Developer, MERN Stack, React Developer, ASP.NET MVC, Web Development, Portfolio";
     const siteUrl = "https://avinkumar.vercel.app/";
     const defaultImage = "https://avinkumar.vercel.app/og-image.jpg"; // You should ensure this image exists in public folder
-    const twitterHandle = "@yourhandle"; // Update with actual handle if available, or remove
+
 
     return (
         <Helmet>
