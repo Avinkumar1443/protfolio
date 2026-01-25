@@ -22,7 +22,7 @@ const Experience = () => {
             company: 'Yash Technology',
             role: 'ASP.NET MVC Developer Intern',
             period: 'Jan 2024 - Jun 2024',
-            location: 'Coimbatore, India',
+            location: 'Hyderabad,India',
             current: false,
             responsibilities: [
                 'Developed enterprise-level web applications using ASP.NET MVC Core framework.',

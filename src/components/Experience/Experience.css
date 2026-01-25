@@ -83,13 +83,15 @@
     justify-content: space-between;
     align-items: flex-start;
     gap: var(--spacing-md);
+    flex-wrap: wrap;
 }
 
 .role-title {
     font-size: var(--font-size-2xl);
     color: var(--color-text-primary);
     margin: 0;
-    flex: 1;
+    flex: 1 1 350px;
+    /* Allow title to take most space but wrap if needed */
 }
 
 .period-wrapper {
@@ -97,6 +99,8 @@
     flex-direction: column;
     gap: var(--spacing-xs);
     align-items: flex-end;
+    flex-shrink: 0;
+    min-width: max-content;
 }
 
 .timeline-item.left .period-wrapper {
@@ -137,6 +141,8 @@
     font-size: var(--font-size-sm);
     color: var(--color-text-secondary);
     font-weight: 500;
+    white-space: nowrap;
+    /* Prevent date from wrapping internally */
 }
 
 .company-info {

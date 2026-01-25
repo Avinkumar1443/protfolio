@@ -1,3 +1,4 @@
-# https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Allow: /
+Sitemap: https://avinkumar.vercel.app/sitemap.xml
+Disallow: /private/*

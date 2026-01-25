@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { HelmetProvider } from 'react-helmet-async';
 import Navigation from './components/Navigation/Navigation';
 import Hero from './components/Hero/Hero';
 import About from './components/About/About';
@@ -10,6 +11,7 @@ import Interests from './components/Interests/Interests';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
 import BackToTop from './components/BackToTop/BackToTop';
+import SEO from './components/SEO/SEO';
 import './App.css';
 
 function App() {
@@ -39,21 +41,24 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      <Navigation />
-      <main>
-        <Hero />
-        <About />
-        <Skills />
-        <Experience />
-        <Projects />
-        <Certifications />
-        <Interests />
-        <Contact />
-      </main>
-      <Footer />
-      <BackToTop />
-    </div>
+    <HelmetProvider>
+      <div className="App">
+        <SEO />
+        <Navigation />
+        <main>
+          <Hero />
+          <About />
+          <Skills />
+          <Experience />
+          <Projects />
+          <Certifications />
+          <Interests />
+          <Contact />
+        </main>
+        <Footer />
+        <BackToTop />
+      </div>
+    </HelmetProvider>
   );
 }
 
