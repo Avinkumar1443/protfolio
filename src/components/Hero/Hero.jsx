@@ -1,15 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './Hero.css';
 import profilePhoto from '../../assets/profile-photo.png';
+// WebP Image conversion failed in environment, using optimized PNG
+// import profilePhotoWebP from '../../assets/profile-photo.webp';
 
 const Hero = () => {
-    const [animate, setAnimate] = useState(false);
-
-    useEffect(() => {
-        setTimeout(() => {
-            setAnimate(true);
-        }, 500);
-    }, []);
+    // JS animation delay removed for immediate FCP
 
     const scrollToProjects = () => {
         document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
@@ -27,7 +23,8 @@ const Hero = () => {
             </div>
 
             <div className="container hero-container">
-                <div className={`hero-content ${animate ? 'animate-in' : ''}`}>
+                {/* CSS animation class for immediate render */}
+                <div className="hero-content animate-fadeInUp">
                     {/* <div className="hero-badge">
                         <span className="badge-dot"></span>
                         Available for Work
@@ -73,10 +70,25 @@ const Hero = () => {
                     </div>
                 </div>
 
-                <div className={`hero-visual ${animate ? 'animate-in' : ''}`}>
+                <div className="hero-visual animate-fadeInRight">
                     <div className="hero-photo-container">
                         <div className="photo-backdrop"></div>
-                        <img src={profilePhoto} alt="Avin Kumar - Full Stack Developer" className="hero-photo" />
+
+                        {/* Optimizations: Explicit Size, High Priority, Aspect Ratio 
+                            Note: WebP source removed due to generation failure 
+                        */}
+                        <div className="image-wrapper">
+                            <img
+                                src={profilePhoto}
+                                alt="Avin Kumar - Full Stack Developer"
+                                className="hero-photo"
+                                width="400"
+                                height="400"
+                                fetchpriority="high" // Critical for LCP
+                                decoding="async"
+                                style={{ aspectRatio: "1/1" }} // Prevent CLS
+                            />
+                        </div>
 
                         <div className="photo-badge floating">
                             <div className="badge-icon">

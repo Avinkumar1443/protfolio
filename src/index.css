@@ -1,12 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600&family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 /* ===== CSS VARIABLES ===== */
 :root {
   /* ... colors ... */
 
   /* Typography */
-  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --font-secondary: 'Poppins', sans-serif;
+  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-secondary: var(--font-primary);
+  /* Unified Typography */
   --font-mono: 'Fira Code', monospace;
   /* Colors */
   --color-bg-primary: #0B0D17;
@@ -36,20 +37,26 @@
   --spacing-2xl: 4rem;
   --spacing-3xl: 6rem;
 
-  /* Typography */
-  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --font-secondary: 'Poppins', sans-serif;
-
+  /* Typography Scale (Fluid) */
   --font-size-xs: 0.75rem;
+  /* 12px */
   --font-size-sm: 0.875rem;
+  /* 14px */
   --font-size-base: 1rem;
+  /* 16px */
   --font-size-lg: 1.125rem;
+  /* 18px */
   --font-size-xl: 1.25rem;
-  --font-size-2xl: 1.5rem;
-  --font-size-3xl: 2rem;
-  --font-size-4xl: 2.5rem;
-  --font-size-5xl: 3rem;
-  --font-size-6xl: 4rem;
+  /* 20px */
+  --font-size-2xl: clamp(1.5rem, 2vw + 1rem, 1.75rem);
+  /* H4: 24px - 28px */
+  --font-size-3xl: clamp(1.75rem, 3vw + 1rem, 2.25rem);
+  /* H3: 28px - 36px */
+  --font-size-4xl: clamp(2rem, 4vw + 1rem, 3rem);
+  /* H2: 32px - 48px */
+  --font-size-5xl: clamp(2.5rem, 5vw + 1rem, 4rem);
+  /* H1: 40px - 64px */
+  --font-size-6xl: clamp(3rem, 6vw + 1rem, 5rem);
 
   /* Shadows */
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -141,6 +148,15 @@ a {
   color: inherit;
   text-decoration: none;
   transition: var(--transition-base);
+}
+
+/* Ensure form elements inherit font */
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
 }
 
 /* ===== UTILITY CLASSES ===== */
@@ -372,9 +388,7 @@ a {
 /* ===== RESPONSIVE BREAKPOINTS ===== */
 @media (max-width: 1024px) {
   :root {
-    --font-size-5xl: 2.5rem;
-    --font-size-4xl: 2rem;
-    --font-size-3xl: 1.75rem;
+    /* Font sizes handled by clamp() */
   }
 
   .container {
@@ -388,9 +402,7 @@ a {
 
 @media (max-width: 768px) {
   :root {
-    --font-size-5xl: 2rem;
-    --font-size-4xl: 1.75rem;
-    --font-size-3xl: 1.5rem;
+    /* Font sizes handled by clamp() */
     --spacing-3xl: 4rem;
     --spacing-2xl: 3rem;
   }
@@ -406,9 +418,7 @@ a {
 
 @media (max-width: 480px) {
   :root {
-    --font-size-5xl: 1.75rem;
-    --font-size-4xl: 1.5rem;
-    --font-size-3xl: 1.25rem;
+    /* Font sizes handled by clamp() */
   }
 
   .container {

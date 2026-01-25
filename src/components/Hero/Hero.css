@@ -57,17 +57,7 @@
 
 /* Hero Content */
 .hero-content {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 1s ease-out;
     padding-top: var(--spacing-xl);
-}
-
-/* ... existing styles ... */
-
-.hero-content.animate-in {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 .hero-badge {
@@ -186,17 +176,12 @@
     position: relative;
     display: flex;
     justify-content: center;
-    opacity: 0;
-    transform: translateX(30px);
-    transition: all 1s ease-out 0.3s;
     margin-top: 5rem;
     align-items: center;
+    /* Animation handled by utility classes now */
 }
 
-.hero-visual.animate-in {
-    opacity: 1;
-    transform: translateX(0);
-}
+/* .hero-visual.animate-in { ... } - REMOVED */
 
 .hero-photo-container {
     position: relative;
@@ -207,14 +192,19 @@
 .hero-photo {
     width: 100%;
     height: auto;
+    aspect-ratio: 1 / 1;
+    /* Fix CLS */
     filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.4));
     mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
     -webkit-mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
     transition: transform 0.5s ease;
+    will-change: transform;
+    /* Hint to browser */
 }
 
 .hero-photo:hover {
     transform: translateY(-5px) scale(1.02);
+    /* Removed heavy shadow transition */
 }
 
 .photo-backdrop {
@@ -405,7 +395,7 @@
         width: fit-content;
     }
 
-.hero-photo-container {
+    .hero-photo-container {
         max-width: 320px;
         margin: 0 auto;
     }
@@ -436,5 +426,41 @@
 
     .hero-photo-container {
         max-width: 280px;
+    }
+
+    /* === MOBILE PERFORMANCE === */
+    /* Disable heavy effects on small screens to unblock Main Thread */
+    .card,
+    .photo-badge.floating,
+    .hero-badge {
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+        box-shadow: none !important;
+        background: var(--color-bg-tertiary) !important;
+        /* Solid fallback */
+    }
+
+    .hero-photo {
+        /* Reduce shadow complexity */
+        filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.5));
+    }
+
+    .gradient-sphere {
+        /* Blur is very expensive, reduce it or remove */
+        filter: blur(40px);
+        /* Reduced from 80px */
+        display: none;
+        /* Often better to just hide one on mobile */
+    }
+
+    .photo-backdrop {
+        /* Disable pulse animation on mobile */
+        animation: none !important;
+        display: none;
+    }
+
+    * {
+        /* Improve scrolling */
+        touch-action: pan-y pan-x;
     }
 }

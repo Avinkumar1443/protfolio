@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
+
 .navigation {
     position: fixed;
     top: 0;
@@ -36,6 +38,31 @@
 
 .nav-logo:hover {
     transform: scale(1.05);
+}
+
+.signature-logo {
+    font-family: 'Allura', cursive;
+    font-size: 2.5rem;
+    /* Larger for script font */
+    background: linear-gradient(to right, #fff 20%, #7C7CFF 50%, #00C6FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    padding: 0 10px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    filter: drop-shadow(0 0 8px rgba(124, 124, 255, 0.3));
+    transition: all 0.4s ease;
+    display: inline-block;
+    line-height: 1;
+}
+
+.nav-logo:hover .signature-logo {
+    filter: drop-shadow(0 0 12px rgba(124, 124, 255, 0.6));
+    transform: scale(1.05) rotate(-2deg);
+    background: linear-gradient(to right, #fff 0%, #00C6FF 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
 }
 
 .nav-links {

@@ -43,7 +43,7 @@ const Navigation = () => {
     <nav className={`navigation ${isScrolled ? 'scrolled' : ''}`}>
       <div className="nav-container">
         <div className="nav-logo" onClick={() => scrollToSection('home')}>
-          <span className="gradient-text">Avin Kumar</span>
+          <span className="signature-logo">Avin Kumar</span>
         </div>
 
         <div id="mobile-nav" className={`nav-links ${isMobileMenuOpen ? 'mobile-active' : ''}`}>
