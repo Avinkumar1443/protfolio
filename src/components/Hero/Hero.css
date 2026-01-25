@@ -1,10 +1,13 @@
 .hero {
-    min-height: 100vh;
+    min-height: 85vh;
+    /* Reduced from 100vh for tighter layout */
     display: flex;
     align-items: center;
     position: relative;
     overflow: hidden;
     padding-top: 80px;
+    padding-bottom: var(--spacing-xl);
+    /* Add bottom padding */
     background: linear-gradient(150deg, #030513 0%, #070a1a 55%, #070a1b 100%);
     /* Navbar offset */
 }
@@ -49,7 +52,8 @@
 .hero-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: var(--spacing-2xl);
+    gap: var(--spacing-xl);
+    /* Reduced from --spacing-2xl */
     align-items: start;
     position: relative;
     z-index: 1;
@@ -57,7 +61,8 @@
 
 /* Hero Content */
 .hero-content {
-    padding-top: var(--spacing-xl);
+    padding-top: var(--spacing-md);
+    /* Reduced from --spacing-xl */
 }
 
 .hero-badge {
