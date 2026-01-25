@@ -13,6 +13,7 @@ const SEO = ({ title, description, keywords, name, type, url, image }) => {
         <Helmet>
             {/* Standard metadata tags */}
             <title>{title ? `${title} | Avin Kumar` : siteTitle}</title>
+            <meta name="google-site-verification" content="PASTE_YOUR_GOOGLE_VERIFICATION_CODE_HERE" />
             <meta name='description' content={description || defaultDescription} />
             <meta name='keywords' content={keywords || defaultKeywords} />
             <meta name='viewport' content='width=device-width, initial-scale=1' />
