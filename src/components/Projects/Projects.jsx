@@ -6,8 +6,8 @@ const Projects = () => {
         {
             title: 'EMC Lab Management System',
             role: 'Frontend Lead & Integration Specialist',
-            description: 'A specialized laboratory management system built for high-performance data handling and automated reporting workflows.',
-            category: 'Full Stack Development',
+            description: 'A specialized enterprise application for laboratory management built with React, Vite, and ASP.NET MVC. This full stack development project handles high-performance data visualization, automated reporting workflows, and secure role-based access control for enterprise clients.',
+            category: 'Enterprise Application Development',
             technologies: ['React', 'Vite', 'ASP.NET MVC', 'PostgreSQL'],
             features: [
                 'Automated complex lab testing workflows and report generation.',
@@ -22,8 +22,8 @@ const Projects = () => {
         {
             title: 'Marketing CMS Platform',
             role: 'Full Stack Developer',
-            description: 'A dynamic content management platform enabling the marketing team to manage product showcases and lead generation campaigns.',
-            category: 'Web Application',
+            description: 'A modern web application built with Next.js and Strapi headless CMS. As a Full Stack Developer, I architected SEO-optimized marketing pages, integrated REST APIs for real-time lead capture, and reduced content deployment time by 60%.',
+            category: 'Full Stack Web Development',
             technologies: ['Next.js', 'Strapi CMS', 'PostgreSQL'],
             features: [
                 'Architected a headless CMS content delivery system.',
@@ -38,8 +38,8 @@ const Projects = () => {
         {
             title: 'Enterprise CRM Solution',
             role: 'Core Feature Developer',
-            description: 'A comprehensive Customer Relationship Management solution handling large-scale business operations, events, and payments.',
-            category: 'Enterprise CRM',
+            description: 'A comprehensive CRM application development project handling large-scale business operations, events, and payment processing. Built with Next.js and ASP.NET MVC, featuring dynamic form engines, secure payment gateway integration, and optimized PostgreSQL queries for scalable web applications.',
+            category: 'Enterprise CRM Development',
             technologies: ['Next.js', 'ASP.NET MVC', 'PostgreSQL'],
             features: [
                 'Built dynamic form engines for custom field configuration.',
@@ -54,7 +54,7 @@ const Projects = () => {
         {
             title: 'Food Application',
             role: 'Frontend Developer',
-            description: 'A modern food ordering application designed for seamless user experience with real-time cart management.',
+            description: 'A responsive web application showcasing modern frontend development skills with HTML5, CSS3, JavaScript, and Bootstrap. Features real-time cart management, dynamic filtering, and interactive UI animations.',
             category: 'Frontend Development',
             technologies: ['HTML5', 'CSS3', 'JavaScript', 'Bootstrap'],
             features: [
@@ -68,8 +68,8 @@ const Projects = () => {
         {
             title: 'Cara E-commerce Website',
             role: 'Full Stack Developer',
-            description: 'A feature-rich e-commerce platform offering a complete shopping lifecycle from product browsing to checkout.',
-            category: 'Full Stack',
+            description: 'A full stack e-commerce web application with searchable product catalog, shopping cart persistence, and mobile-first responsive design. Demonstrates expertise in JavaScript development and modern web application architecture.',
+            category: 'Full Stack Development',
             technologies: ['HTML', 'CSS', 'JavaScript', 'Bootstrap', 'E-commerce'],
             features: [
                 'Searchable product catalog with category filters.',
@@ -86,7 +86,7 @@ const Projects = () => {
             <div className="container">
                 <div className="section-title scroll-animate">
                     <h2>Featured Projects</h2>
-                    <p className="section-subtitle">Real-world applications and professional work</p>
+                    <p className="section-subtitle">Real-world enterprise applications and web development projects</p>
                 </div>
 
                 <div className="projects-grid">

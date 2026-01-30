@@ -29,8 +29,7 @@ const Skills = () => {
             skills: [
                 { name: 'PostgreSQL', level: 80 },
                 { name: 'MySQL', level: 78 },
-                { name: 'SQL Server', level: 75 },
-                { name: 'Docker', level: 75 }
+                { name: 'SQL Server', level: 75 }
             ]
         },
         {
@@ -48,8 +47,8 @@ const Skills = () => {
         <section id="skills" className="section skills">
             <div className="container">
                 <div className="section-title scroll-animate">
-                    <h2>Skills & Expertise</h2>
-                    <p className="section-subtitle">Technologies and tools I work with</p>
+                    <h2>Technical Skills & Expertise</h2>
+                    <p className="section-subtitle">Technologies I use to build modern web applications</p>
                 </div>
 
                 <div className="skills-grid">

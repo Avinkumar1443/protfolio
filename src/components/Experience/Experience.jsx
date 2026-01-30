@@ -10,10 +10,10 @@ const Experience = () => {
             location: 'Coimbatore, India',
             current: true,
             responsibilities: [
-                'Developing scalable full-stack enterprise applications using ASP.NET Core and modern JavaScript frameworks.',
-                'Architecting database schemas and optimizing queries in PostgreSQL and SQL Server for high-performance applications.',
-                'Leading the frontend development of responsive, SEO-optimized web products using React, Next.js, and Vite.',
-                'Collaborating with cross-functional teams to deliver robust CRM and lab management solutions.'
+                'Developing scalable enterprise web applications as a Full Stack Developer using ASP.NET Core, React, and Next.js for clients across multiple industries.',
+                'Architecting and optimizing PostgreSQL and SQL Server databases for high-performance CRM applications and admin dashboard systems.',
+                'Leading frontend development of responsive, SEO-optimized web products using modern JavaScript frameworks including React and Next.js.',
+                'Building REST API integrations and authentication systems for enterprise application development projects.'
             ],
             keyProjects: ['Aquair', 'Smile Marketing', 'StudioMart'],
             technologies: ['ASP.NET Core', 'ASP.NET MVC', 'React', 'Next.js', 'PostgreSQL', 'SSMS', 'Vite']
@@ -25,10 +25,10 @@ const Experience = () => {
             location: 'Hyderabad,India',
             current: false,
             responsibilities: [
-                'Developed enterprise-level web applications using ASP.NET MVC Core framework.',
-                'Built comprehensive Admin Modules with full CRUD operations and secure user management.',
-                'Integrated SQL Server databases and implemented Entity Framework for efficient data handling.',
-                'Participated in Agile development processes and code reviews to ensure code quality.'
+                'Developed enterprise-level web applications as an ASP.NET MVC Developer using ASP.NET Core framework and C#.',
+                'Built comprehensive admin modules with full CRUD operations, authentication and authorization systems, and secure user management.',
+                'Integrated SQL Server databases using Entity Framework for efficient data handling in enterprise applications.',
+                'Participated in Agile development processes and code reviews, collaborating with senior developers on scalable web application projects.'
             ],
             technologies: ['ASP.NET MVC Core', 'C#', 'SQL Server', 'Entity Framework', 'HTML/CSS', 'JavaScript']
         }
@@ -38,8 +38,8 @@ const Experience = () => {
         <section id="experience" className="section experience">
             <div className="container">
                 <div className="section-title scroll-animate">
-                    <h2>Work Experience</h2>
-                    <p className="section-subtitle">Professional journey and achievements</p>
+                    <h2>Professional Experience</h2>
+                    <p className="section-subtitle">Software Engineer building enterprise web applications</p>
                 </div>
 
                 <div className="timeline">

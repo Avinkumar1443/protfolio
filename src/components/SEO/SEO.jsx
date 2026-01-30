@@ -2,9 +2,9 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 const SEO = ({ title, description, keywords, name, type, url, image }) => {
-    const siteTitle = "Avin Kumar | Full Stack Developer";
-    const defaultDescription = "Portfolio of Avin Kumar, a Full Stack Developer specializing in MERN stack, ASP.NET MVC, and Scalable Web Apps.";
-    const defaultKeywords = "Full Stack Developer, MERN Stack, React Developer, ASP.NET MVC, Web Development, Portfolio";
+    const siteTitle = "Avin Kumar | Full Stack Developer | React, ASP.NET & Next.js Expert";
+    const defaultDescription = "Avin Kumar is a Full Stack Developer specializing in React, Next.js, and ASP.NET Core. Experienced software engineer building enterprise web applications, CRM systems, and scalable REST APIs. Portfolio showcasing real-world projects.";
+    const defaultKeywords = "Avin Kumar, Avin Kumar developer, Avin Kumar portfolio, Full Stack Developer, React Developer, Next.js Developer, ASP.NET Developer, ASP.NET Core Developer, JavaScript Developer, Software Engineer, Web Application Developer, REST API Developer, MERN Stack Developer, Frontend Developer, Backend Developer, Full stack developer portfolio, React and ASP.NET developer, Enterprise web application developer";
     const siteUrl = "https://avinkumar.vercel.app/";
     const defaultImage = "https://avinkumar.vercel.app/og-image.jpg"; // You should ensure this image exists in public folder
 

@@ -33,11 +33,10 @@ const Hero = () => {
                         Hi, I'm <span className="text-gradient">Avin Kumar</span>
                     </h1>
                     <h2 className="hero-headline">
-                        Building Scalable & Modern Web Applications
+                        Full Stack Developer Building Enterprise Web Applications
                     </h2>
                     <p className="hero-description">
-                        MCA graduate passionate about building modern, responsive web applications using the MERN stack.
-                        Experienced in developing scalable solutions with ASP.NET MVC and Docker-based deployments.
+                        I'm Avin Kumar, a Full Stack Developer and Software Engineer specializing in modern web application development. With expertise in React, Next.js, and ASP.NET Core, I build scalable, high-performance solutions for enterprise clients and startups.
                     </p>
                     <div className="hero-actions">
                         <button className="btn btn-primary" onClick={scrollToProjects}>

@@ -52,7 +52,7 @@ const Footer = () => {
             <div className="container footer-grid">
                 <div className="footer-left">
                     <h3 className="gradient-text">Avin Kumar</h3>
-                    <p className="secondary-text">Web Development Enthusiast</p>
+                    <p className="secondary-text">Full Stack Developer | Coimbatore, India</p>
                 </div>
 
                 <div className="footer-center">

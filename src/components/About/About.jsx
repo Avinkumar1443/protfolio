@@ -35,23 +35,18 @@ const About = () => {
                 <div className="about-content">
                     <div className="about-text scroll-animate">
                         <h3 className="about-intro">
-                            Full Stack Web Developer with a strong foundation in MERN stack and ASP.NET MVC
+                            Avin Kumar – Full Stack Developer Specializing in React, ASP.NET, and Modern Web Technologies
                         </h3>
 
                         <div className="about-paragraphs">
                             <p className="lead-text">
-                                I am passionate about creating scalable, high-performance web applications that solve real-world problems.
-                                My approach combines clean code practices with modern design principles to deliver exceptional user experiences.
+                                I'm Avin Kumar, a Full Stack Developer and Software Engineer passionate about building scalable, high-performance web applications. With hands-on experience in both frontend and backend development, I specialize in creating enterprise-grade solutions using the MERN stack, ASP.NET Core, and modern JavaScript frameworks like React and Next.js.
                             </p>
                             <p className="secondary-text">
-                                During my internship at Yash Technology, I gained valuable hands-on experience building enterprise-grade
-                                applications using ASP.NET MVC. I successfully implemented complex CRUD operations, managed SQL Server
-                                databases, and collaborated with senior developers to deliver robust solutions.
+                                As an ASP.NET Developer and React Developer, I've worked on complex enterprise applications including CRM systems, admin dashboards, and lab management platforms. My expertise spans authentication and authorization systems, REST API development, database optimization with PostgreSQL and SQL Server, and building responsive, SEO-friendly user interfaces.
                             </p>
                             <p className="secondary-text">
-                                I maintain a continuous learning mindset, constantly exploring new technologies like Docker and Next.js
-                                to stay ahead in the rapidly evolving tech landscape. I thrive in collaborative environments where I can
-                                contribute to innovative projects and grow as a developer.
+                                Currently working as a Software Engineer at Vaanam Technology in India, I focus on full stack development for enterprise clients. I continuously expand my skill set with technologies like API integration and scalable web application architecture. My approach combines clean code practices, modern design principles, and a commitment to delivering exceptional user experiences.
                             </p>
                         </div>
                     </div>
